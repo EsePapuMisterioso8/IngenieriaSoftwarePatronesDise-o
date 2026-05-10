@@ -2,6 +2,11 @@ package trabajo.builder;
 
 public class Director {
 
+    // --------------------------------------------
+    // Clase que ayuda a crear credenciales según el tipo requerido
+    // --------------------------------------------
+
+    // método para crear credencial de alumno
     public void construirCredencialAlumno(Credenciales credenciales){
         credenciales.setTipoCredencial(TipoCredencial.CREDENCIAL_ALUMNO);
         credenciales.setNombre("Martin");
@@ -12,6 +17,7 @@ public class Director {
         credenciales.setCarrera("Ingenieria en Computación");
     }
 
+    // método para crear credencial de Docente
     public void construirCredencialDocente(Credenciales credenciales){
         credenciales.setTipoCredencial(TipoCredencial.CREDENCIAL_DOCENTE);
         credenciales.setNombre("Juan");
