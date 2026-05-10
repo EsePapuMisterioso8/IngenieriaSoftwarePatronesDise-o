@@ -1,18 +1,19 @@
 package trabajo.singleton;
 
 public class Singleton {
-
+    // Variables de la clase que contienen la instancia unica del programa y los atributos
     private static Singleton configurador;
     private String url;
     private String baseDatos;
 
-    // Constructor de la clase
+    // Constructor de la clase, recibe dos parametros
     private Singleton(String url, String baseDatos){
         this.url = url;
         this.baseDatos = baseDatos;
     }
 
-    // Este metodo ayuda a crear las intancias gracias a nuestro constructor
+    // Este metodo crea la intancia de tipo Singleton , primero verifica que el objeto exista
+    // si no existe crea el objeto con los valores dados y si existe solo retorna lo que ya teniamos
     public static Singleton getInstance(String url , String baseDatos){
         if(configurador == null){
 
@@ -26,6 +27,8 @@ public class Singleton {
         return  configurador;
     }
 
+    // métodos setter's y getter's para la clase
+    // sirven para asignar y obtener los valores de los atributos
     public void setUrl(String url){
         this.url = url;
     }
